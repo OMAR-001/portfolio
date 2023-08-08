@@ -1,0 +1,484 @@
+/* Reset some default styles */
+body, ul, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a black background for the entire portfolio */
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    
+      overflow-x: hidden;
+    
+  }
+  
+  /* Header styles */
+  .header {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/man-studio-portrait-light-90764.jpg"); /* Replace with your header background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 600px; /* Adjust the minimum height as needed */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: flex-end; /* Align content to the right */
+  }
+  .header-section {
+    position: relative;
+    /* Set the height of the header to full viewport height */
+    background: url('path/to/your/image.jpg') center/cover no-repeat; /* Add your image path here */
+    color: #fff; /* Set the text color */
+    text-align: center;
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  
+  .header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    /* Add other styles as needed */
+  }
+  
+  
+ 
+  
+  .header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar-logo {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-menu li {
+    margin: 0 10px;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  @media (min-width: 769px) {
+    
+  
+  
+/* Add this CSS to your existing styles */
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #F9DBBB;
+  bottom: -6px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover:before {
+  transform: scaleX(1);
+}
+
+}
+  /* ... (your existing CSS code remains the same) ... */
+
+/* Responsive Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar-logo {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: none; /* Hide menu items by default */
+  }
+  
+  .navbar-menu.active {
+    display: flex; /* Display menu items when active class is added */
+  }
+  
+  .navbar-menu li {
+    margin: 0 10px;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  /* Toggle button styles */
+  .navbar-toggle {
+    cursor: pointer;
+    display: none; /* Hide toggle button by default */
+  border: none;
+        width: 30px; /* Adjust the width and height as needed */
+        height: 30px;
+      
+      
+      
+  }
+  
+  .toggle-icon {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+  }
+  
+/* Apply centering for small screens */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+  
+  .about-section .about-content {
+    opacity: 1; /* Keep the content visible */
+    transform: translateY(0);
+  }
+  
+  .contact-section {
+    text-align: center;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0; /* Hide off-screen by default */
+    width: 60%;
+    height: 100vh;
+    transition: right 0.3s;
+  }
+
+  .navbar-menu.active {
+    right: 0; /* Slide in when active class is added */
+  }
+
+  .navbar-toggle {
+    display: block; /* Display toggle button for small screens */
+  }
+
+
+
+}
+
+
+
+
+  
+  /* For larger screens, keep the animation */
+  @media (min-width: 769px) { /* Adjust the breakpoint as needed */
+    .about-section .about-content {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+      
+    }
+  
+    .about-section .about-content.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+/* Apply centering for small screens */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .header {
+    background-size: cover;
+  }
+  
+  .header-content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .about-content {
+    text-align: center;
+  }
+  
+  .contact-section {
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  .Projects {
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  .Projects h1 {
+    margin-bottom: 20px;
+  }
+
+  .Projects h3 {
+    margin-bottom: 40px;
+  }
+  
+  .carousel-inner {
+    text-align: center;
+  }
+  
+  
+  
+  .download-button {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .social-icon {
+    font-size: 30px;
+    margin: 0 10px;
+  }
+  
+ 
+}
+
+
+
+
+  .about-section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+  }
+  
+
+  .section-title {
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the left */
+    height: 100%; /* Vertically center within the column */
+  }
+  
+  
+  /* Add this CSS to your existing styles */
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.contact-content {
+  opacity: 0;
+  transform: translateY(20px);
+  font-size: 18px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+#imageSlider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* For headings */
+h1, h2, h3, h4, h5, h6, a {
+  font-family: 'Cinzel', serif;
+}
+
+/* For paragraphs */
+p {
+
+  font-family: 'Quicksand', sans-serif;
+
+
+}
+
+footer {
+  background-color: #000000;
+  color: #fff;
+}
+.social-icon {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.social-icon:hover {
+  color: #F9DBBB;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #E3CCAE;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #F9DBBB;
+  color: #333;
+}
+@media (max-width: 767px) {
+  .header-content {
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .nav-link:hover {
+    border-bottom-color: transparent; /* Remove hover effect */
+  }
+}
+
+img {
+  max-width: 100%; /* Ensure images don't exceed viewport width */
+}
+
+
+/* Add this CSS to your stylesheet or style section */
+
+/* For Webkit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F9DBBB; /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffe8d0; /* Color of the thumb on hover */
+}
+
+/* For Firefox */
+/* Note: Firefox supports scrollbar styling only for the thumb, not the track */
+/* You can use browser-specific prefixes for other properties if needed */
+
+/* For IE and Edge (currently supported in Edge 79+) */
+/* Note: IE and Edge have limited support for scrollbar styling */
+/* You can use browser-specific prefixes for other properties if needed */
+ /* Set the width of the scrollbar */
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #F9DBBB; /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffe8d0; /* Color of the thumb on hover */
+}
